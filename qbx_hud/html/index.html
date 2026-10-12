@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Top: servernavn -->
+<div id="title">
+    <span class="line"></span>
+    <span id="title-text">test</span>
+    <span class="line"></span>
+</div>
+
+<!-- Øverst til højre: job og penge -->
+<div id="money">
+    <div class="row job">
+        <span class="label">JOB</span>
+        <span class="value"><b id="job">-</b><small id="grade"></small></span>
+    </div>
+    <div class="row">
+        <span class="label">KONTANT</span>
+        <span class="value" id="cash">0 kr.</span>
+    </div>
+    <div class="row black">
+        <span class="label">SORTE PENGE</span>
+        <span class="value" id="black">0 kr.</span>
+    </div>
+</div>
+
+<!-- Nederst midt: status-ringe -->
+<div id="status">
+    <div class="ring health" id="r-health">
+        <svg viewBox="0 0 44 44">
+            <circle class="ring-bg" cx="22" cy="22" r="18"/>
+            <circle class="ring-fg" cx="22" cy="22" r="18"/>
+        </svg>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.65-9.5 9-9.5 9z"/></svg>
+    </div>
+    <div class="ring armor hidden" id="r-armor">
+        <svg viewBox="0 0 44 44">
+            <circle class="ring-bg" cx="22" cy="22" r="18"/>
+            <circle class="ring-fg" cx="22" cy="22" r="18"/>
+        </svg>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+    </div>
+    <div class="ring hunger" id="r-hunger">
+        <svg viewBox="0 0 44 44">
+            <circle class="ring-bg" cx="22" cy="22" r="18"/>
+            <circle class="ring-fg" cx="22" cy="22" r="18"/>
+        </svg>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M7 3v7a2 2 0 0 0 2 2v9h2v-9a2 2 0 0 0 2-2V3h-1.5v5h-1V3h-1.5v5h-1V3zM17 3c-2 1-3 3.5-3 6v4h3v8h2V3z"/></svg>
+    </div>
+    <div class="ring thirst" id="r-thirst">
+        <svg viewBox="0 0 44 44">
+            <circle class="ring-bg" cx="22" cy="22" r="18"/>
+            <circle class="ring-fg" cx="22" cy="22" r="18"/>
+        </svg>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>
+    </div>
+</div>
+
+<!-- Nederst til højre: køretøj -->
+<div id="vehicle" class="hidden">
+    <div class="speed"><span id="speed">0</span><small id="unit">KM/T</small></div>
+    <div class="fuel" id="fuel-wrap">
+        <div class="fuel-top"><span>BRÆNDSTOF</span><span id="fuel-pct">100%</span></div>
+        <div class="bar"><div class="bar-fg" id="fuel-bar"></div></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
